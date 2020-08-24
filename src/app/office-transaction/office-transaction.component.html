@@ -1,0 +1,37 @@
+
+
+
+<table class="table table-bordered">
+    <thead>
+     <tr >
+         <th >Office Transactions</th>
+         <th ></th>
+         <th ></th>
+         <th ></th>
+         <th (click)="navigate()" class="button">+Add Transaction</th>
+     </tr>
+     <tr >
+        <th >&nbsp;</th>
+        <th ></th>
+        <th ></th>
+        <th ></th>
+        <th ></th>
+    </tr>
+    <tr style="background-color: deepskyblue;color:white">
+      <th  >Date</th>
+      <th >Decription</th>
+      <th >Credit</th>
+      <th >Dedit</th>
+      <th >Closing Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let country of tranactionsArray; index as i">
+      <td >{{ country.createdAt | date : 'shortDate'}}</td>
+        <td>{{country.description}}</td>
+      <td>{{ country.type == 'CREDIT' ? country.amount : '-' }}</td>
+      <td>{{ country.type == 'DEBIT' ? country.amount : '-' }}</td>
+      <td>{{ country.closingBalance }}</td>
+    </tr>
+    </tbody>
+  </table>

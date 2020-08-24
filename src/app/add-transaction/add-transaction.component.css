@@ -1,0 +1,10 @@
+
+
+.container-fluid{
+    padding: 30px;
+    line-height: 4em;
+}
+
+#cross:hover {
+    font-weight: 500;
+}
